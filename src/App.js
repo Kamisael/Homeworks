@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import PropTypes from 'prop-types'
+import './App.css'
 
-function App() {
+const FirstApp1 = ({title, sum}) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    
+    <>
+    <div className= "App">
+      <h1>{title}</h1>
+      <span>{sum}</span>
+      </div>
+    </>
+  )
 }
 
-export default App;
+
+FirstApp1.propTypes = {
+  title: PropTypes.string.isRequired,
+  sum: PropTypes.number.isRequired
+}
+
+FirstApp1.defaultProps = {
+  title: 'Primer Challenge',
+  sum: 3000
+}
+
+export default FirstApp1
+
+
+
+
+
+

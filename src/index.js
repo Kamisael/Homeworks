@@ -1,13 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import { AddCategory } from './addcategory';
+import FirstApp1 from './App';
+import FirtsApp from './App2';
+
+import MyComponent from './contador';
+import { ComponentApp } from './Gif';
+import { GifExpertApp } from './GifExpertApp';
+import { GifGrid } from './GifGrid';
+import './index.css'
+
+
+
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <FirstApp1/>
+    <FirtsApp value={0}/>
+    <ComponentApp/>
+    <AddCategory/>
+    <GifExpertApp/>
+    <MyComponent/>
+    
+    
   </React.StrictMode>
 );
 
